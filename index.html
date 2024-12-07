@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Podcast Player</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <h1>Podcast</h1>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="main">
+    <div class="gradient-overlay"></div>
+    <div class="player-container">
+      <img src="podcast-cover.jpg" alt="Capa do Podcast" class="podcast-cover">
+      <div class="podcast-info">
+        <h2>AntroCast</h2>
+        <p class="podcast-title">Conhecendo a Doença</p>
+        <!-- <p class="podcast-tags">#enfermagem #antropologia #saúde ❤️</p> -->
+        <div class="controls">
+          <button id="play-pause" class="play-pause">▶</button>
+          <input type="range" id="progress-bar" value="0" min="0" max="100">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <audio id="podcast-audio" src="podcast.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
