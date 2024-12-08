@@ -1,36 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Podcast Player</title>
+  <title>Antrocast</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Cabeçalho -->
-  <header class="header">
-    <h1>Podcast</h1>
-  </header>
-
-  <!-- Conteúdo Principal -->
-  <main class="main">
-    <div class="gradient-overlay"></div>
-    <div class="player-container">
-      <img src="podcast-cover.jpg" alt="Capa do Podcast" class="podcast-cover">
-      <div class="podcast-info">
-        <h2>AntroCast</h2>
-        <p class="podcast-title">Conhecendo a Doença</p>
-        <!-- <p class="podcast-tags">#enfermagem #antropologia #saúde ❤️</p> -->
-        <div class="controls">
-          <button id="play-pause" class="play-pause">▶</button>
-          <input type="range" id="progress-bar" value="0" min="0" max="100">
+  <div class="container">
+    <div class="podcast-section">
+      <div class="podcast-cover">
+        <img src="capa.png" alt="Capa do Podcast" class="podcast-image">
+        <button class="play-button" id="playButton"></button>
+      </div>
+      <div class="content">
+        <h1 class="title">ANTROCAST</h1>
+        <div class="hosts">
+          <img src="host1.png" alt="Host 1">
+          <img src="host2.png" alt="Host 2">
+          <img src="host3.png" alt="Host 3">
+          <img src="host4.png" alt="Host 4">
+          <img src="host5.png" alt="Host 5">
+          <img src="host6.png" alt="Host 6">
         </div>
+        <h2 class="episode-title">episódio 01</h2>
+        <p class="episode-name">A pessoa além da Doença: a desmedicalização dos corpos.</p>
+        <p class="episode-description">
+          Neste podcast, exploramos uma perspectiva transformadora sobre a relação entre o corpo e a doença. 
+          Em vez de enxergar a doença como algo que "habita" a pessoa, discutimos como ela é um estado que afeta, 
+          mas não define o indivíduo. Através de uma entrevista, abordaremos o impacto emocional, social e 
+          sociológico dessa visão, incentivando uma compreensão mais humana e integrativa da saúde e do adoecimento.
+        </p>
       </div>
     </div>
-  </main>
-
-  <audio id="podcast-audio" src="podcast.mp3"></audio>
-
+  </div>
   <script src="script.js"></script>
 </body>
 </html>

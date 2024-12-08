@@ -1,29 +1,14 @@
-const audio = document.getElementById('podcast-audio');
-const playPauseButton = document.getElementById('play-pause');
-const progressBar = document.getElementById('progress-bar');
-
+const playButton = document.getElementById('playButton');
 let isPlaying = false;
+const audio = new Audio('podcast.mp3');
 
-// Função para tocar ou pausar o áudio
-playPauseButton.addEventListener('click', () => {
+playButton.addEventListener('click', () => {
   if (isPlaying) {
     audio.pause();
-    playPauseButton.textContent = '▶';
+    playButton.classList.remove('playing');
   } else {
     audio.play();
-    playPauseButton.textContent = '⏸';
+    playButton.classList.add('playing');
   }
   isPlaying = !isPlaying;
-});
-
-// Atualizar a barra de progresso
-audio.addEventListener('timeupdate', () => {
-  const progress = (audio.currentTime / audio.duration) * 100;
-  progressBar.value = progress;
-});
-
-// Permitir que o usuário ajuste o tempo
-progressBar.addEventListener('input', () => {
-  const time = (progressBar.value / 100) * audio.duration;
-  audio.currentTime = time;
 });
