@@ -6,13 +6,14 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #ffffff;
-  background-image: linear-gradient(to bottom, #000000d0, #333333), url(background-image.jpg);
+  background-image: linear-gradient(to bottom, #000000a8, #000000), url(background-image.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 
 .container {
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,16 +24,17 @@ body {
 .podcast-section {
   display: flex;
   flex-direction: row;
+  align-items: center;
   max-width: 1200px;
-  background-color: #1a1a1a;
   border-radius: 10px;
   overflow: hidden;
   padding: 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .podcast-cover {
   position: relative;
+  width: 300px;
+  height: 300px;
 }
 
 .podcast-image {
@@ -103,6 +105,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  body {
+    height: 100%;
+  }
   .podcast-section {
     flex-direction: column;
     align-items: center;
